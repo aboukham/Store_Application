@@ -1,0 +1,54 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <link rel = "stylesheet" href="./shoppingCart.css" type="text/css">
+    <script src="./main.js"></script>
+    
+</head>
+<body>
+    <header class ="header">
+        <img src="../server/Ressource/logo.png" >
+        <div id="username-pass-login">
+            <label id="error"></label>
+            <label>Username : </label> <input type="text" id="username" class="form-control w-25" />
+            <label>Password : </label> <input type="password" id="password" class="form-control w-25" />
+            <button onclick="login()" class="btn btn-primary"> Login </button>
+        </div>
+        <div>
+            <h1 id="welcome"> Welcome to Abdelaziz's shopping store</h1>
+            <button onclick="logout()" class="btn btn-dark" id="logout">Logout</button>
+        </div>
+    </header>
+
+    <main>
+        <div class = "container" id="products">
+            <h2 id="productsList">Product list:</h2>
+            <table class="stock" id="tableOfProducts">
+                <tr>
+                    <th >Name</th>
+                    <th >Price</th>
+                    <th >Image</th>
+                    <th >Stock</th>
+                    <th >Actions</th>
+                </tr>
+            </table>
+            <h2 id="myCart">Your shoppingCart is:</h2>
+
+            <table class="shoppingCart">
+                <tr> <th>Name</th> <th>Price</th><th>Total</th><th>Quantity</th> </tr>
+            </table>
+            <table class="shoppingCart" id="cart">
+                
+            </table>
+            <button onclick="placeOrder()" id="checkout">Place order</button>
+        </div>
+        <article id="Welcome">
+            <h1 style="margin-top: 15px">Welcome Store website </h1>
+        </article>
+    </main>
+</body>
+</html>
